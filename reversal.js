@@ -9,9 +9,8 @@ const Str = "Aj mausam badaa baimaan hai";
 
 var Arr = Str.split(" ").map(reverse);
 
-function reverse(words){
-    return words.split("").reverse().join("");
+function reverse(words) {
+  return words.split("").reverse().join("");
 }
 
 console.log(Arr.join(" "));
-
