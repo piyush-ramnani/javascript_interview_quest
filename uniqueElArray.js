@@ -18,6 +18,7 @@ function singleNumber(A) {
   return Number(ans);
 }
 
+// The map function will take an extra space though, but this is just for input output in the terminal. Cool isn't it? JS can be tricky sometimes. Just to take input output this much extra code
 read.question("Enter the array (comma separated): ", function (arr) {
   let A = arr.split(",").map((el) => Number(el));
 
