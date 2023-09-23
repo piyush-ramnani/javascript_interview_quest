@@ -2,6 +2,7 @@
 
 const readline = require("readline");
 
+//creates an input output interface in the terminal
 const read = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -19,6 +20,8 @@ function singleNumber(A) {
 }
 
 // The map function will take an extra space though, but this is just for input output in the terminal. Cool isn't it? JS can be tricky sometimes. Just to take input output this much extra code
+
+//Takes input string and maps it to an array
 read.question("Enter the array (comma separated): ", function (arr) {
   let A = arr.split(",").map((el) => Number(el));
 
