@@ -37,7 +37,7 @@ class Node {
 }
 
 //Given LinkedList
-let A = new Node(1);
+var A = new Node(1);
 A.next = new Node(2);
 A.next.next = new Node(3);
 A.next.next.next = new Node(4);
@@ -76,5 +76,9 @@ function insertElementLL(B, C) {
     newNode.next = temp;
   }
 
-  return head;
+  head = A;
+  while (head != null) {
+    process.stdout.write(head.data + "->");
+    head = head.next;
+  }
 }
