@@ -8,6 +8,7 @@ Notes:
 
 */
 
+//Taking user Input from console
 const readline = require("readline");
 
 const read = readline.createInterface({
@@ -29,6 +30,7 @@ read.question("Enter the value you want to insert: ", function (inputB) {
   );
 });
 
+//definition of LL
 class Node {
   constructor(data) {
     this.data = data;
