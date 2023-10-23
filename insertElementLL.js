@@ -76,9 +76,10 @@ function insertElementLL(B, C) {
     newNode.next = temp;
   }
 
+  //printing the LL
   head = A;
   while (head != null) {
-    process.stdout.write(head.data + "->");
+    process.stdout.write(head.data + " -> ");
     head = head.next;
   }
 }
