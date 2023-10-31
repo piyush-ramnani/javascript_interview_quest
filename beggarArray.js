@@ -7,6 +7,7 @@ For ith devotee B[i][0] = L, B[i][1] = R, B[i][2] = P, given by the 2D array B
 
 const readline = require("readline");
 
+//internal function of readline
 const r = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -33,18 +34,24 @@ r.question("Enter the number of beggars: ", function (inputA) {
 
 function beggarArray(A, B) {
   let result = [...Array(A)].map(() => 0);
+  //Creates an empty array of Array(length)
+
   let l = B.length;
+
   console.log("\ninitial result array: ", result);
 
   for (let i = 0; i < l; i++) {
     let L = B[i][0];
     let R = B[i][1];
     let P = B[i][2];
+    //for each iteration, assigning L & R accordingly
 
     result[L - 1] += P;
     if (R < result.length) result[R] += -1 * P;
+    //if the element is beyond the array length, no point in taking the value
   }
 
+  //carry forward of the values in the array (prefix max)
   for (let i = 1; i < A; i++) {
     result[i] = result[i] + result[i - 1];
   }
