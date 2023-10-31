@@ -18,11 +18,11 @@ r.question("Enter the number of beggars: ", function (inputA) {
     "specify distribution / querry array (comma and space seperated | Example: 2 4 10 , 3 5 20): \n",
     function (inputB) {
       let A = parseInt(inputA, 10);
-      // Parse string inputA as an integer
+      // string inputA => integer
       let B = inputB
         .split(" , ")
         .map((row) => row.split(" ").map((num) => parseInt(num, 10)));
-      // Parse the 2nd string input into 2D array of integers
+      // string inputB => 2D array
       console.log("A :", A);
       console.log("B: ", B);
 
@@ -34,7 +34,7 @@ r.question("Enter the number of beggars: ", function (inputA) {
 
 function beggarArray(A, B) {
   let result = [...Array(A)].map(() => 0);
-  //Creates an empty array of Array(length)
+  //result: [0, 0, 0, 0, 0]
 
   let l = B.length;
 
@@ -44,14 +44,14 @@ function beggarArray(A, B) {
     let L = B[i][0];
     let R = B[i][1];
     let P = B[i][2];
-    //for each iteration, assigning L & R accordingly
+    //forEach i => L, R, P assigned
 
     result[L - 1] += P;
     if (R < result.length) result[R] += -1 * P;
-    //if the element is beyond the array length, no point in taking the value
+    //result[result.length] does not exists
   }
 
-  //carry forward of the values in the array (prefix max)
+  //prefix max carry forward
   for (let i = 1; i < A; i++) {
     result[i] = result[i] + result[i - 1];
   }
