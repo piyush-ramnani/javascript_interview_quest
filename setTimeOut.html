@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SetTimeOut_Ex</title>
+  </head>
+  <body>
+    <!--BONUS: How to place an item in the centre of the screen-->
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      "
+    >
+      <button
+        style="
+          background-color: #4caf50;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+        "
+        id="btn"
+      >
+        Click Me
+      </button>
+    </div>
+    <script>
+      const myButton = document.getElementById("btn");
+
+      function changeText() {
+        myButton.innerHTML = "Hello";
+      }
+
+      myButton.addEventListener("click", () => {
+        setTimeout(changeText, 2000);
+        setTimeout(() => {
+          alert("SetTimeOut triggered for button after 2 sec");
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
