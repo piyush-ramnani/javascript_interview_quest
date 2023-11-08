@@ -42,5 +42,5 @@ setTimeout(() => myCar.fly(), 2000);
 setTimeout(() => richKid.fly(), 3000);
 
 /*
-myCar.fly() & richKid.fly() are executed immediately, without any delay, and it logs the results right away. The setTimeout function receives the result of calling the function as its first argument, and in this case, which is why result is undefined. So, effectively, you are using setTimeout(undefined, 2000)
+myCar.fly() & richKid.fly() are executed immediately, without any delay, and it logs the results right away. The setTimeout function receives the result of calling the function as its first argument in this case, which is why result is undefined. So, effectively, you are using setTimeout(undefined, 2000)
 */
