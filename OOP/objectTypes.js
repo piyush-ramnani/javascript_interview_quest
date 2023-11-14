@@ -9,7 +9,7 @@ function createCircle(radius) {
 }
 const factoryCircle = createCircle(1);
 factoryCircle.draw();
-console.log(factoryCircle.constructor());
+console.log(factoryCircle.constructor()); // {}
 
 //Constructor function
 function Circle(radius) {
@@ -20,7 +20,7 @@ function Circle(radius) {
 }
 const constructorCircle = new Circle(1);
 constructorCircle.draw();
-console.log(constructorCircle.constructor());
+console.log(constructorCircle.constructor()); // undefined
 
 /*
 
