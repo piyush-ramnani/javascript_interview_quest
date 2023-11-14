@@ -31,5 +31,7 @@ console.log("My full name: ", myname.getFullName());
 # The child class should have the constructor with parameters of both classes (parent & child) to be accessed
 by the child class.
 
-# methods in parent class can be accessed by using super keyword and variables can be accessed by 'this keyword';
+# methods in parent class can be accessed by using super keyword and variables can be accessed by 'this' keyword
+
+NOTE: super is not a variable that points to the prototype object. Attempting to read super itself is a 'SyntaxError'
 */
