@@ -13,9 +13,11 @@ function searchInSortedMatrix(A, B) {
   let m = A[0].length;
   let ans = Infinity;
 
+  //starting from top right
   let r = 0;
   let c = m - 1;
 
+  //can't use for loop as it will increment i and j value in every iteration and will run diagonally
   while (r < n && c >= 0) {
     let value = A[r][c];
 
@@ -24,9 +26,9 @@ function searchInSortedMatrix(A, B) {
     }
 
     if (B > value) {
-      r = r + 1;
+      r = r + 1; //move below
     } else if (B <= value) {
-      c = c - 1;
+      c = c - 1; //move left
     }
   }
   if (ans === Infinity) {
