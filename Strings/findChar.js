@@ -13,7 +13,7 @@ function findWordsContaining(words, x) {
   let result = [];
 
   for (let i = 0; i < n; i++) {
-    let index = words[i].indexOf(x);
+    let index = words[i].indexOf(x); //returns 1 or -1
     if (index != -1) {
       result.push(i);
     }
