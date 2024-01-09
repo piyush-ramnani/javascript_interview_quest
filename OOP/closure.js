@@ -28,6 +28,7 @@ function createCircle(radius) {
 
 const circle = new createCircle(1);
 circle.draw();
+//accessing values via draw closure function
 
 /*
  DIFFERENCE B/W SCOPE & CLOSURE:
