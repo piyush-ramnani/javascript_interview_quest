@@ -1,3 +1,6 @@
+//TC: NlogN | SC: N
+
+
 function mergeTwoSorted(A, B) {
   console.log(`Array 1: [${A}] | Array 2: [${B}]`);
 
